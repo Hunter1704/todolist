@@ -3,6 +3,7 @@ package com.example.todo_project.dto;
 
 import com.example.todo_project.entity.TaskStatus;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -23,6 +24,6 @@ public class TaskRequestDto {
     @Size(min = 1, max = 50, message = "Description can't exceed 50 characters")
     private String description;
 
-    @NotBlank(message = "Status is required")
+    @NotNull(message = "Status is required")
     private TaskStatus status;
 }
